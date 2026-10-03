@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WaveLab Física</title>
+<meta name="description" content="Laboratorio virtual de Física: energía, Sol, termodinámica, electromagnetismo, fluidos y universo.">
+<meta name="theme-color" content="#0d1b2e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#/" aria-label="Inicio">
+    <span class="logo" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v6.5L4.6 18.2A1.8 1.8 0 0 0 6.2 21h11.6a1.8 1.8 0 0 0 1.6-2.8L14 9.5V3"/><path d="M7.5 15c1.5-1 3-1 4.5 0s3 1 4.5 0"/></svg></span>
+    <span>Wave<b>Lab</b> <em>Física</em></span>
+  </a>
+  <nav class="topnav">
+    <a href="#/labs">Laboratorios</a>
+  </nav>
+  <button class="iconbtn" id="bigBtn" title="Modo proyector (letra grande)" aria-label="Modo proyector">⛶</button>
+  <button class="iconbtn" id="themeBtn" title="Cambiar tema" aria-label="Cambiar tema">◐</button>
+</header>
+<main id="view" class="wrap"></main>
+<footer class="foot wrap">WaveLab Física · Laboratorio virtual para el secundario · WaveBit</footer>
+
+<script src="js/core.js"></script>
+<script src="js/sims-energia.js"></script>
+<script src="js/sims-solar.js"></script>
+<script src="js/sims-termica.js"></script>
+<script src="js/sims-electro.js"></script>
+<script src="js/sims-mecanica.js"></script>
+<script src="js/sims-universo.js"></script>
+<script src="js/programas.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
