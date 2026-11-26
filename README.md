@@ -1,59 +1,40 @@
-# WaveLab Física
+# 🔬 WaveLab Física
 
-Laboratorio virtual de Física para el secundario: 21 simuladores interactivos, conceptos clave y desafíos organizados según los ejes de dos programas.
-Es una web estática (HTML + CSS + JavaScript, sin dependencias ni servidor). Se abre con doble clic en `index.html` o se publica gratis en GitHub Pages.
+> Virtual physics lab for secondary school: 21 interactive simulators, key concepts and randomized challenges organized by curriculum axes.
 
-## Programas y ejes
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=white) ![Canvas API](https://img.shields.io/badge/Canvas%20API-333333?style=flat-square) ![No dependencies](https://img.shields.io/badge/No%20dependencies-555555?style=flat-square)
 
-**Programa A · Energía, Sol y Termodinámica**
-1. Fuentes de energía y sus transformaciones: conservación, uso y sustentabilidad
-2. Energía solar
-3. Fenómenos termodinámicos y sustentabilidad
+![WaveLab Física](docs/screenshot.png)
 
-**Programa B · Fenómenos físicos**
-1. La energía en los fenómenos físicos
-2. Fenómenos térmicos
-3. Fenómenos electromagnéticos
-4. Fenómenos mecánicos
-5. El universo, su estructura y su dinámica
+## Overview
+A zero-install web lab that lets students experiment with energy, heat, electricity, fluids and the universe from a computer, a phone or the classroom projector. Content follows two official physics programs.
 
-Para cambiar el nombre de los programas (por ejemplo "5.º año"), editá `name` y `title` en `js/programas.js`.
+## Key features
+- **21 simulators** with live controls, readings and formulas: mechanical energy (skate track), work & power, energy flow diagrams, Kepler's laws, seasons by latitude, solar water heating, greenhouse effect, thermal equilibrium, phase changes, Carnot engines, Coulomb's law, series/parallel circuits with ammeter and voltmeter, electromagnets, hydrostatics, buoyancy, Bernoulli, relativity.
+- **Real data**: Argentina and world energy matrices (Argendata, Energy Institute, CAMMESA).
+- **Challenges**: 8-question quizzes per axis with randomized numeric problems and explanations.
+- **Classroom-ready**: projector mode, light/dark theme, deep links per lab (e.g. `#/lab/circuito/casa`).
 
-## Laboratorios
+## Tech stack
+Vanilla JavaScript + HTML5 Canvas, modular simulator files (`js/sims-*.js`), plain CSS. No build step, no backend.
 
-| Tema | Laboratorio |
-|------|-------------|
-| Energía | Conservación de la energía mecánica (pista de skate / montaña rusa, con rozamiento y otras gravedades) · Trabajo y potencia (grúa y "tu potencia" en la escalera) · Transformaciones y rendimiento (diagrama de flujo de energía) · Fuentes y matriz energética (juego de clasificación, matrices del mundo / Argentina / generación eléctrica, centrales de Córdoba) · Consumo en casa (artefactos, lectura del medidor, curva de demanda) |
-| Solar | Leyes de Kepler · Movimiento aparente del Sol y estaciones (por latitud y fecha) · Energía solar en casa (termotanque y paneles, mes a mes) · Efecto invernadero |
-| Térmica | Equilibrio térmico y calor específico · Cambios de estado (calor sensible y latente) · Primera ley y máquinas térmicas (Carnot) · Escalas termométricas y dilatación |
-| Electromagnetismo | Ley de Coulomb y campo eléctrico · Circuitos serie/paralelo con amperímetro y voltímetro + instalación domiciliaria (térmica) · Electroimán |
-| Fluidos | Hidrostática, Pascal y presión atmosférica · Flotación y Arquímedes · Continuidad, Bernoulli y capilaridad |
-| Universo | Fuerzas fundamentales y ámbitos de Newton / Einstein / cuántica · Relatividad especial |
+## Run locally
+Open `index.html`, or `python3 -m http.server 8080`.
 
-Cada laboratorio incluye controles, lecturas en vivo, fórmulas y preguntas "Para pensar".
-Cada eje tiene conceptos clave, consignas para investigar y debatir, y un **desafío** de 8 preguntas (conceptuales y problemas con números al azar, con explicación).
-
-## Para el aula
-- Botón ⛶: modo proyector (letra más grande y pantalla completa).
-- Botón ◐: tema claro / oscuro / automático.
-- Cada laboratorio tiene su propio link (por ejemplo `#/lab/circuito/casa`) para compartir con los alumnos.
-
-## Datos
-- Matriz primaria Argentina 2023: Argendata (Fundar).
-- Matriz primaria mundial 2023: Energy Institute, Statistical Review of World Energy 2024.
-- Generación eléctrica Argentina 2025: CAMMESA, Informe Anual 2025.
-- Radiación solar y temperatura del agua para Córdoba: valores aproximados con fines didácticos.
-
-## Estructura
+## Project structure
 ```
-index.html
-css/styles.css
-js/core.js            utilidades: canvas, controles, gráficos
-js/sims-*.js          simuladores por área
-js/programas.js       programas, ejes, conceptos y consignas
-js/quiz.js            banco de preguntas
-js/app.js             navegación
+js/core.js        canvas, controls and chart utilities
+js/sims-*.js      simulators by area
+js/programas.js   programs, axes, concepts and prompts
+js/quiz.js        question bank
+js/app.js         routing and navigation
 ```
+
+📘 Detailed guide (Spanish): [docs/GUIA.md](docs/GUIA.md)
 
 ---
-WaveBit · 2026
+
+## Author
+
+**Guillermo Cuenya** — Senior QA Automation Engineer / SDET · Telecommunications Engineer  
+[LinkedIn](https://www.linkedin.com/in/guillermoadriancuenya/) · [GitHub](https://github.com/gcuenya1)
